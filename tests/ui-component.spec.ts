@@ -63,11 +63,9 @@ test.describe('Modal & Overlays', () => {
         //custom dropdown
         await page.locator('.form-group', { hasText: 'Position'}).locator('nb-select').click();
         //option 1
-        //await page.getByRole('list').getByText('bottom-right').click();
-        //option 2
-        await page.locator('.form-group', { hasText: 'Position'}).locator('nb-select').click()
+        await page.getByRole('list').getByText('bottom-right').click();
 
-        await expect(page.locator('nb-option', { hasText : 'bottom-right'})).toHaveText('bottom-right')
+        await expect(page.getByRole('button', {name: 'bottom-right'})).toHaveText('bottom-right')
 
         //looping through all values
         const dropDownPosition = page.locator('.form-group', { hasText: 'Position'}).locator('nb-select')
