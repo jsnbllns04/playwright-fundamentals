@@ -1,0 +1,31 @@
+{
+  "name": "vscode",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "po-test-chromium": "npx playwright test page-object-model.spec.ts --project=chromium",
+    "po-test-chromium:qa": "cross-env TEST_ENV=qa npx playwright test page-object-model.spec.ts --project=chromium",
+    "po-test-firefox": "npx playwright test page-object-model.spec.ts --project=firefox",
+    "po-test-all": "npm run po-test-chromium && npm run po-test-firefox"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0",
+    "playwright-core": "^1.63.0",
+    "undici-types": "^8.9.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "cross-env": "^10.1.0",
+    "dotenv": "^18.0.7"
+  }
+}
