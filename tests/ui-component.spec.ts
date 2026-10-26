@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
     await page.goto('https://playground.bondaracademy.com/');
 });
 
-test.describe.only('Form Layouts', () => {
+test.describe('Form Layouts', () => {
     test.describe.configure({retries: 2})
 
     test.beforeEach(async ({ page }, testInfo) => {
